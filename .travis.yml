@@ -1,0 +1,9 @@
+branches:
+  only:
+  - master
+  - dev
+import:
+- source: Travis/integration.yml
+  if: branch = master
+- source: Travis/file.yml
+  if: branch = dev
