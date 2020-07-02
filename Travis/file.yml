@@ -1,1 +1,16 @@
-
+language: python
+puthon: 3.8
+script: 
+  - cd PythonApplication1
+  - pytest
+  - cd ..
+deploy:
+  provider: releases
+  api_key: $GITHUB_TOKEN
+  prerelease: true
+  skip_cleanup: true
+  on:
+    repo: DenKo45/TRPO_Lab6
+    branch: dev
+    tags: false
+    
